@@ -1,0 +1,21 @@
+{
+  "name": "com.bluedev.dynamicmodalwindow",
+  "version": "0.1.1",
+  "displayName": "Dynamic Modal Window",
+  "description": "A Dynamic modal window package for unity",
+  "unity": "2019.4",
+  "unityRelease": "34f1",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "keywords": [
+    "Utility",
+    "UI"
+  ],
+  "author": {
+    "name": "BlueDev",
+    "email": "am112008@rediffmail.com",
+    "url": ""
+  },
+  "type": "tool"
+}
