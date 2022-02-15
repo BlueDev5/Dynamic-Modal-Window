@@ -15,7 +15,4 @@ To get started, navigate to the Prefabs of the asset, and drag the Popup Canvas 
 Now you can acces the PopupManager and create popup requests.
 
 # Documentation
-## Overview
-1. PopupManager - Singleton class for Showing and hiding popups.
-2. PopupAction  - Represents a action for the PopupButton.
-3. PopupRequest - The request for popup.
+See [Documentation](https://github.com/Amogh-Mittal/Dynamic-Modal-Window/blob/main/Documentation.md)
