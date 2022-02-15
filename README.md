@@ -16,3 +16,6 @@ Now you can acces the PopupManager and create popup requests.
 
 # Documentation
 See [Documentation](https://github.com/Amogh-Mittal/Dynamic-Modal-Window/blob/main/Documentation.md)
+
+# Contribute
+If you find a bug or a common layout is missing, then feel free to create a issue [here](https://github.com/Amogh-Mittal/Dynamic-Modal-Window/issues)
