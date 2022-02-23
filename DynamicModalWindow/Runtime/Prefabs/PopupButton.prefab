@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7149811896206328118}
   - component: {fileID: 7149811896206328119}
   - component: {fileID: 7149811896206328116}
-  - component: {fileID: 3074614900063966879}
+  - component: {fileID: 735833280976987657}
   m_Layer: 5
   m_Name: PopupButton
   m_TagString: Untagged
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
---- !u!114 &3074614900063966879
+--- !u!114 &735833280976987657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7149811896206328266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb1a7f38a71db1bc4895b4892c5bd781, type: 3}
+  m_Script: {fileID: 11500000, guid: 60b693b78dcddf14eba929b3e4b6586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 7149811896165927965}
-  _button: {fileID: 0}
-  _image: {fileID: 0}
+  _button: {fileID: 7149811896206328113}
+  _image: {fileID: 7149811896206328112}

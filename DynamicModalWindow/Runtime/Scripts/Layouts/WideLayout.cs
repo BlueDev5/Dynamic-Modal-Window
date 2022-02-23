@@ -84,28 +84,28 @@ namespace GameSystems.Popup.Layouts
             var totalWidth = GetTotalWidth();
             var totalHeight = GetTotalHeight();
             var bodyRoot = PopupManager.Instance.BodyRoot.transform;
+            var actionsRoot = PopupManager.Instance.ActionsRoot.GetComponent<RectTransform>();
 
             IPopupElement firstElement = _elements.Keys.ElementAt(0);
             var furthestXPoint = bodyRoot.position.x - (totalWidth / 2);
             var furthestYPoint = bodyRoot.position.y - (totalHeight / 2);
             var xCenter = furthestXPoint + firstElement.Width / 2;
             var yCenter = (totalHeight - (furthestYPoint + _downColumnHeight)) / 2;
-            Debug.Log("X:" + xCenter + " Y:" + yCenter);
-            Debug.Log("Local Center:" + bodyRoot.InverseTransformPoint(new Vector3(xCenter, yCenter)));
-            // _elements[firstElement] = new Vector2(xCenter, yCenter);
+
             _elements[firstElement] = bodyRoot.TransformPoint(new Vector2(0, yCenter));
 
             if (_downLayout == null)
             {
                 _downLayout = new GameObject("Wide Layout", typeof(HorizontalLayoutGroup)).GetComponent<HorizontalLayoutGroup>();
                 _downLayout.transform.SetParent(bodyRoot);
-                // var maxYPoint = furthestYPoint + firstElement.Height;
                 var layoutYCenter = furthestYPoint - (_downColumnHeight / 2);
 
                 _downLayout.transform.position = new Vector2(0, layoutYCenter);
                 _downLayout.transform.localPosition = new Vector2(0, _downLayout.transform.localPosition.y);
 
                 rect = _downLayout.GetComponent<RectTransform>();
+                rect.localPosition = new Vector2(rect.localPosition.x, rect.localPosition.y + actionsRoot.sizeDelta.y / 7);
+                rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y - actionsRoot.sizeDelta.y / 4);
             }
 
             rect.sizeDelta = new Vector2(totalWidth, _downColumnHeight);

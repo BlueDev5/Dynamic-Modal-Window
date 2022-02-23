@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 7143917584864841187}
   - component: {fileID: 7143917584864841186}
   - component: {fileID: 7143917584864841185}
-  - component: {fileID: 7143917584864841213}
+  - component: {fileID: 2502999396688329536}
   m_Layer: 5
   m_Name: Popup canvas
   m_TagString: Untagged
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7143917584864841213
+--- !u!114 &2502999396688329536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -588,13 +588,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7143917584864841184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd392b821813fe6fb3eeafbbe899d42, type: 3}
+  m_Script: {fileID: 11500000, guid: 30cfec16da6d12abcaca3e8068618dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _popupRoot: {fileID: 7143917584003001426}
   _actionsRoot: {fileID: 7143917583432050782}
   _bodyRoot: {fileID: 7143917583729738022}
-  _actionButton: {fileID: 3074614900063966879, guid: 89b07603b487c12dd8318118874e73ae,
+  _actionButton: {fileID: 735833280976987657, guid: 65ce4b946501935dba7a2dadab6ef83a,
     type: 3}
   _titleRoot: {fileID: 7143917584373833738}
   _title: {fileID: 7143917583092590708}

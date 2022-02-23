@@ -34,6 +34,7 @@ namespace GameSystems.Popup
         [SerializeField] private PopupButton _actionButton;
         [SerializeField] private GameObject _titleRoot;
         [SerializeField] private TMP_Text _title;
+        private HorizontalLayoutGroup _actionsGroup;
 
         private bool _isOpen = false;
         #endregion
@@ -42,7 +43,7 @@ namespace GameSystems.Popup
         #region Getters and Setters
         public GameObject BodyRoot => _bodyRoot;
 
-        private HorizontalLayoutGroup _actionsGroup;
+        public GameObject ActionsRoot => _actionsRoot;
         #endregion
 
 
@@ -76,6 +77,8 @@ namespace GameSystems.Popup
                 var button = Instantiate<PopupButton>(_actionButton, _actionsRoot.transform);
                 button.Init(action);
             }
+
+            _bodyRoot.transform.localPosition = request.Position;
 
             _isOpen = true;
         }

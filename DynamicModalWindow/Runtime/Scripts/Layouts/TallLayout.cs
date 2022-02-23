@@ -84,6 +84,7 @@ namespace GameSystems.Popup.Layouts
             var totalWidth = GetTotalWidth();
             var totalHeight = GetTotalHeight();
             var bodyRoot = PopupManager.Instance.BodyRoot.transform;
+            var actionsRoot = PopupManager.Instance.ActionsRoot.GetComponent<RectTransform>();
 
             IPopupElement firstElement = _elements.Keys.ElementAt(0);
             var furthestXPoint = bodyRoot.position.x - (totalWidth / 2);
@@ -103,6 +104,8 @@ namespace GameSystems.Popup.Layouts
                 _rightLayout.transform.localPosition = new Vector2(_rightLayout.transform.localPosition.x, 0);
 
                 rect = _rightLayout.GetComponent<RectTransform>();
+                rect.localPosition = new Vector2(rect.localPosition.x, rect.localPosition.y + actionsRoot.sizeDelta.y / 7);
+                rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y - actionsRoot.sizeDelta.y / 4);
             }
 
             rect.sizeDelta = new Vector2(_rightColumnWidth, totalHeight);
