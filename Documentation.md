@@ -90,9 +90,17 @@ new TallLayout();
 
 Illustration:
 
----
-
----
+<pre>
+---------------------
+|            |      | ----
+|            |______|     |
+|            |      |     \
+|            |      |      => The amount of rows on the 2nd column is variable.
+|            |______|     /
+|            |      |     |
+|            |      | ----
+---------------------
+</pre>
 
 ### Wide Layout
 
@@ -105,6 +113,19 @@ Constructor(s):
 ```csharp
 new WideLayout();
 ```
+
+Illustration:
+
+<pre>
+---------------------
+|                   |
+|                   |
+|___________________|
+|     |       |     | 
+|     |       |     |  => The amount of columns on the second row is variable.
+|     |       |     | 
+---------------------
+</pre>
 
 ## Showing a popup
 
