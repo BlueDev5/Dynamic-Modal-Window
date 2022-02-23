@@ -5,12 +5,7 @@ A fully dynamic modal window for unity engine. It works like an API, i.e., you c
 For placing the elements the popup manager uses the layout class passed to it through the popup request.
 
 # Installation
-For installation make sure you have [git](https://git-scm.com/downloads) installed.
-Then run
-`
-git clone https://github.com/BlueDev5/Dynamic-Modal-Window.git
-`
-The nopen the clone directory and copy the folder to your project
+For installation Head to the [releases](https://github.com/BlueDev5/Dynamic-Modal-Window/releases) page, then pick the latest version and download the unity package. Then open the unity project in which you want to import this, then [import the unity package you downloaded](https://docs.unity3d.com/Manual/AssetPackagesImport.html)
 ### Note: once this project becomes feature-ready I'll upload an asset on the asset store.
 
 # Get Started
