@@ -2,6 +2,7 @@ using GameSystems.Popup.Backend;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using LayoutElement = UnityEngine.UI.LayoutElement;
 
 namespace GameSystems.Popup.Elements
 {
@@ -10,6 +11,7 @@ namespace GameSystems.Popup.Elements
         #region Variables
         private float _width = 0;
         private float _height = 0;
+        private int _fontSize = 20;
         private string _text;
         public Transform Parent { get; set; }
         #endregion
@@ -22,8 +24,9 @@ namespace GameSystems.Popup.Elements
 
 
         #region Constructors
-        public TextElement(string text, float preferredWidth, float preferredHeight)
+        public TextElement(string text, float preferredWidth, float preferredHeight, int fontSize = 20)
         {
+            _fontSize = fontSize;
             _text = text;
             _height = preferredHeight;
             _width = preferredWidth;
@@ -43,6 +46,7 @@ namespace GameSystems.Popup.Elements
             var text = element.AddComponent<TextMeshProUGUI>();
             text.text = _text;
             text.alignment = TextAlignmentOptions.Midline;
+            text.fontSize = _fontSize;
             var layoutElement = element.AddComponent<LayoutElement>();
             layoutElement.preferredWidth = Width / 2;
             layoutElement.preferredHeight = Height / 2;

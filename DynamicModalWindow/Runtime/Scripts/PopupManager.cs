@@ -44,6 +44,10 @@ namespace GameSystems.Popup
         public GameObject BodyRoot => _bodyRoot;
 
         public GameObject ActionsRoot => _actionsRoot;
+
+        public GameObject TitleRoot => _titleRoot;
+
+        public RectTransform PopupRoot => _popupRoot;
         #endregion
 
 
@@ -67,8 +71,12 @@ namespace GameSystems.Popup
                 var position = request.PopupLayout.AddElement(element);
             }
 
-            request.Elements.ForEach(element =>
-                element.Create(request.PopupLayout.GetElements()[element], element.Parent.gameObject));
+            var elements = request.PopupLayout.GetElements();
+            for (int i = 0; i < elements.Count; i++)
+            {
+                var element = request.Elements[i];
+                element.Create(elements[i].Position, element.Parent.gameObject);
+            }
 
             _popupRoot.sizeDelta = new Vector2(request.PopupLayout.GetTotalWidth(), request.PopupLayout.GetTotalHeight());
 
@@ -78,7 +86,7 @@ namespace GameSystems.Popup
                 button.Init(action);
             }
 
-            _bodyRoot.transform.localPosition = request.Position;
+            _popupRoot.localPosition = request.Position;
 
             _isOpen = true;
         }
