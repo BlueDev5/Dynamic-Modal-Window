@@ -172,3 +172,10 @@ PopupManager.Instance.ShowPopup(request);
 ```
 
 where request is the Popup request you wanna send.
+
+### Step 3: Hiding the popup
+
+You can just do:
+```csharp
+PopupManager.HidePopup();
+```
