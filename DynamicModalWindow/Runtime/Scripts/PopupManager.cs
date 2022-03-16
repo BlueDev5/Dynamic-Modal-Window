@@ -75,10 +75,11 @@ namespace GameSystems.Popup
             for (int i = 0; i < elements.Count; i++)
             {
                 var element = request.Elements[i];
-                element.Create(elements[i].Position, element.Parent.gameObject);
+                element.Create(elements[i].Position, element.Parent?.gameObject);
             }
 
-            _popupRoot.sizeDelta = new Vector2(request.PopupLayout.GetTotalWidth(), request.PopupLayout.GetTotalHeight());
+            var vector2 = new Vector2(request.PopupLayout.GetTotalWidth(), request.PopupLayout.GetTotalHeight());
+            _popupRoot.sizeDelta = vector2;
 
             foreach (var action in request.Actions)
             {

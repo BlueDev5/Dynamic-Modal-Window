@@ -34,11 +34,11 @@ new PopupRequest(List<IPopupElement> elements, List<PopupAction> actions, ILayou
 
 ### ILayout
 
-Base class for all layouts for the popup.
+Base Interface for all layouts for the popup.
 
 ### IPopupElement
 
-Base Class for all popupElements.
+Base Interface for all popupElements.
 
 ### PopupElement
 
@@ -85,7 +85,7 @@ Inherits: System.Object, ILayout
 Constructor(s):
 
 ```csharp
-new TallLayout();
+new TallLayout(Vector4 margin);
 ```
 
 Illustration:
@@ -111,7 +111,7 @@ Inherits: System.Object, ILayout
 Constructor(s):
 
 ```csharp
-new WideLayout();
+new WideLayout(Vector4 margin);
 ```
 
 Illustration:
@@ -127,6 +127,35 @@ Illustration:
 ---------------------
 </pre>
 
+### Grid Layout
+
+A Layout With variable rows and columns.
+
+Inherits: System.Object, ILayout
+
+Constructor(s):
+
+```csharp
+public GridLayout(Vector4 margin, Vector2 spacing, int maxRows = 1, int maxColumns = 1)
+```
+
+Illustration:
+
+<pre>
+---------------------
+|         |         |
+|         |         | --
+|___________________|   |
+|         |         |    --> The number of rows is variable.
+|         |         |   |
+|         |         | --
+---------------------
+    |         |
+     ---- ----    
+         |
+  The number of columns is also variable.    
+</pre>
+
 ## Showing a popup
 
 ### Step 1: Creating Popup Request
@@ -134,7 +163,9 @@ Illustration:
 First of all to show an popup you need a popup Request. (Remember to add using Gamesystems.Popup.Backend)
 Here's the Syntax:
 
-`var popupRequest = new Popup(List<IPopupElement> elements, List<PopupAction> actions, ILayout layout, string title = "");`
+```csharp
+var popupRequest = new Popup(List<IPopupElement> elements, List<PopupAction> actions, ILayout layout, string title = "");
+```
 
 where elements are the elements of the popup, actions are the buttons to display with the function they'll execute, layout is the ILayout class that tells the popup manager where to place the next window and title is the title of the popup (default is "");
 

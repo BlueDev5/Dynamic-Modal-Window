@@ -1,4 +1,4 @@
-### Disclaimer: This project is still in development and not fully feature-ready (with samples and enough options, though you can alter it to your needs.)
+### <b>Disclaimer: This project is still in development and not fully feature-ready (with samples and enough options, though you can alter it to your needs.)</b>
 
 # Introduction
 A fully dynamic modal window for unity engine. It works like an API, i.e., you create a popup Request and ask the popup Manager to show a popup with that request.
