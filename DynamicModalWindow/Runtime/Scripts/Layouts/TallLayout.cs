@@ -7,9 +7,6 @@ using LayoutElement = GameSystems.Popup.Backend.LayoutElement;
 
 namespace GameSystems.Popup.Layouts
 {
-    /// <summary>
-    /// Some Explanation.
-    /// </summary>
     public class TallLayout : ILayout
     {
         #region Variables
