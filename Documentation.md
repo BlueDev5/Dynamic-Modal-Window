@@ -210,3 +210,60 @@ You can just do:
 ```csharp
 PopupManager.HidePopup();
 ```
+
+## Miscellaneous Tips
+
+### Creating complex Popup Requests
+
+Let's say you want to create a popup request that yields this result:
+
+<pre>
+---------------------
+|      |     |      |
+|      |     |      |
+|______|_____|______|
+|         |         |
+|         |         |
+|_________|_________|
+|                   |
+|                   |
+---------------------
+</pre>
+
+For this the request would look something like this:
+
+```csharp
+  // The buttons of the popup.
+  var actions = new List<PopupAction>()
+  {
+    //add actions if you want any
+  };
+
+  // The layout to use. This is a 3 by 3 Grid Layout
+  var layout = new GridLayout(margin: new Vector4(10, 10, 10, 10), spacing: new Vector2(5, 5), maxRows: 3, maxColumns: 3);
+
+  // The elements for the popup.
+  var elements = new List<IPopupElement>()
+  {
+    // First Row //
+    new PopupElement(100, 150),
+    new PopupElement(100, 100),
+    new PopupElement(100, 100),
+    // First Row //
+
+    // Second Row //
+    new PopupElement(150, 100),
+    new PopupElement(150, 100),
+    new PopupElement(0, 0),
+    // Second Row //
+
+    // Third Row //
+    new PopupElement(300, 100),
+    // Third Row //
+  };
+
+  // The request we create.
+  PopupRequest request = new PopupRequest(elements, actions, layout, "Hello");
+```
+
+Notice, I used an empty popup element with 0 width and 0 height. This will ensure that the next element is placed on next row, If it weren't there the system will think that the element that belonged to third row is the last element of the 2nd row.
