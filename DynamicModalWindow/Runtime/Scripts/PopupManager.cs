@@ -75,7 +75,7 @@ namespace GameSystems.Popup
             for (int i = 0; i < elements.Count; i++)
             {
                 var element = request.Elements[i];
-                element.Create(elements[i].Position, element.Parent?.gameObject);
+                element.Create(elements[i].Position);
             }
 
             var vector2 = new Vector2(request.PopupLayout.GetTotalWidth(), request.PopupLayout.GetTotalHeight());

@@ -120,7 +120,6 @@ namespace GameSystems.Popup.Layouts
 
             var element = _elements.Where(e => e.Element == firstElement).First();
             element.Position = bodyRoot.TransformPoint(new Vector2(0, yCenter));
-            element.Scale = new Vector2(element.Element.Width + _horizontalMargin, element.Element.Height + _verticalMargin);
 
             if (_downLayout == null)
             {
